@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailsScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:saveEnabled="true">
+
+    <LinearLayout
+        android:id="@+id/detailsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="#f5f5cb"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:saveEnabled="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TO DO LIST ITEM"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:saveEnabled="true">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/checkBox"
+                android:layout_weight="1"
+                android:ems="10"
+                android:freezesText="true"
+                android:inputType="textPersonName"
+                tools:text="Appoint with Dr. Poon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/notesLabel"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight=".2"
+                android:gravity="top"
+                android:text="NOTES:"/>
+
+            <EditText
+                android:id="@+id/notesMultiText"
+                android:layout_width="0dp"
+                android:layout_height="81dp"
+                android:layout_weight=".8"
+                android:background="#bec4da"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/duedateLabel"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight=".2"
+                android:gravity="top"
+                android:text="DUE DATE:"/>
+
+            <EditText
+                android:id="@+id/duedateEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight=".8"
+                android:background="#bec4da"
+                android:ems="10"
+                android:gravity="right|fill_vertical"
+                android:inputType="date"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addressEdit"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_gravity="right|fill_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.43"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/locationLabel"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="LOCATION:"/>
+
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="#bec4da"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <TextView
+                android:id="@+id/priorityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="PRIORITY:"/>
+
+            <Spinner
+                android:id="@+id/prioritySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:gravity="right|fill_vertical"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="#BEC4DA"
+            android:text="SAVE"/>
+    </LinearLayout>
+</ScrollView>
